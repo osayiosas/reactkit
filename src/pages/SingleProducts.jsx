@@ -1,9 +1,19 @@
-
+import { Link, useParams } from "react-router-dom";
+import products from "../data";
 
 const SingleProducts = () => {
-  return (
-    <div>SingleProducts</div>
-  )
-}
+  const { productId } = useParams();
+   const product = products.find((product) => product.id === productId)
 
-export default SingleProducts
+   const {image, name} = product
+
+  return (
+    <section className="section product">
+      <img src={image} alt={name} />
+      <h5>{name}</h5>
+      <Link to="/products">Back to products</Link>
+    </section>
+  );
+};
+
+export default SingleProducts;

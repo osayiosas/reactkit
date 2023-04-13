@@ -1,5 +1,5 @@
 import { Link, Outlet } from "react-router-dom";
-import Navbar from '../components/Navbar'
+import NavbarStyle from "../components/NavbarStyle";
 
 
 
@@ -7,7 +7,7 @@ import Navbar from '../components/Navbar'
 const SharedLayout = () => {
   return (
     <>
-    <Navbar />
+    <NavbarStyle />
     <Outlet />
     </>
   )
